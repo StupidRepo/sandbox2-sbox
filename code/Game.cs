@@ -1,4 +1,5 @@
 ﻿using Sandbox;
+using System.Collections.Generic;
 using System.Linq;
 
 partial class SandboxGame : Game
@@ -44,16 +45,6 @@ partial class SandboxGame : Game
 		ent.Rotation = Rotation.From( new Angles( 0, owner.EyeRot.Angles().yaw, 0 ) ) * Rotation.FromAxis( Vector3.Up, 180 );
 		ent.SetModel( modelname );
 		ent.Position = tr.EndPos - Vector3.Up * ent.CollisionBounds.Mins.z;
-	}
-
-	[ServerCmd( "killall" )]
-	public static void KillAll()
-	{
-		var players = Entity.All.OfType<Player>();
-		foreach( Player ply in players )
-		{
-			ply.TakeDamage( DamageInfo.Generic( ply.Health * 2 ) );
-		}
 	}
 
 	[ServerCmd( "spawn_entity" )]
