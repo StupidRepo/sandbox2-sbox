@@ -11,7 +11,7 @@ public class CurrentTool : Panel
 	public CurrentTool()
 	{
 		Title = Add.Label( "Tool", "title" );
-		Description = Add.Label( "This is a tool", "description" );
+		Description = Add.Label( "this is a tool", "description" );
 	}
 
 	public override void Tick()
@@ -22,7 +22,7 @@ public class CurrentTool : Panel
 		if ( tool != null )
 		{
 			Title.SetText( tool.ClassInfo.Title );
-			Description.SetText( tool.ClassInfo.Description + " *Sandbox 2 made by ThatCat#0001 on Discord*" );
+			Description.SetText( tool.ClassInfo.Description );
 		}
 	}
 
