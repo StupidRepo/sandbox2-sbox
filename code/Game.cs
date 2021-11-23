@@ -1,4 +1,5 @@
 ﻿using Sandbox;
+using System.Linq;
 
 partial class SandboxGame : Game
 {
@@ -45,7 +46,18 @@ partial class SandboxGame : Game
 		ent.Position = tr.EndPos - Vector3.Up * ent.CollisionBounds.Mins.z;
 	}
 
+	[ServerCmd( "killall" )]
+	public static void KillAll()
+	{
+		var players = Entity.All.OfType<Player>();
+		foreach( Player ply in players )
+		{
+			ply.TakeDamage( DamageInfo.Generic( ply.Health * 2 ) );
+		}
+	}
+
 	[ServerCmd( "spawn_entity" )]
+
 	public static void SpawnEntity( string entName )
 	{
 		var owner = ConsoleSystem.Caller.Pawn;
