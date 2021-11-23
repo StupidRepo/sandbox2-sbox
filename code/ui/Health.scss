@@ -1,32 +1,27 @@
 .healthBack {
-    position: center;
-    width: 60%;
-    height: 3%;
+    position: absolute;
     left: 750px;
-    bottom: -890px;
+    bottom: 170px;
     padding: 5px;
     background-color: #323232;
     box-shadow: 0 0 5px black;
     border-radius: 5px;
 }
 
-// Bar Back that goes on Back
 .healthBarBack {
+    width: 250px;
     background-color: #212121;
     border-radius: 5px;
 }
 
-// Bar that goes on BarBack
 .healthBar {
     background-color: #e74c3c;
     border-radius: 5px;
 }
 
-// Text
 .healthText {
     margin-left: 10px;
     margin-right: 5px;
-    margin-top: 3px;
     color: #e74c3c;
     text-shadow: 0 0 1px black;
     font-weight: bold;
