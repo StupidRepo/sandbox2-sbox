@@ -1,0 +1,30 @@
+.healthBack {
+    position: center;
+    width: 60%;
+    height: 3%;
+    left: 750px;
+    bottom: -890px;
+    padding: 5px;
+    background-color: #323232;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.healthBarBack {
+    background-color: #212121;
+    border-radius: 5px;
+}
+
+.healthBar {
+    background-color: #e74c3c;
+    border-radius: 5px;
+}
+
+.healthText {
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 3px;
+    color: #e74c3c;
+    text-shadow: 0 0 1px black;
+    font-weight: bold;
+}
